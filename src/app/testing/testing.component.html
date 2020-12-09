@@ -1,0 +1,59 @@
+<head>
+    <style>
+      ul#menu li {
+        display:inline;
+      }
+    
+      div.polaroid {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 25px;
+      }
+  
+      div.polaroidProfile {
+        float: left;
+        width: 30%;
+        padding: 5px;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 25px;
+      }
+  
+      div.container {
+        padding: 10px 20px;
+      }
+  
+      div.row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      div.fotoProfil {
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+
+<br/>
+<h1>Post</h1>
+<br/>
+
+<div class="row">
+  <tr> 
+    <div class="polaroid">
+    <img src={{liPost.image}} alt="5 Terre" style="width:100%">
+    <div class="container">
+    <p><b>{{liPost.owner.firstName}}</b> {{liPost.text}}</p>
+    <a>Comments</a>
+    <tr *ngFor="let e of lisComment">
+        <td>
+            <p id="text"><b>{{e.owner.firstName + " " + e.owner.lastName}}</b> {{e.message}}</p>
+        </td>
+    </tr>
+    </div>
+  </div>      
+  </tr>
+</div>

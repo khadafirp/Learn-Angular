@@ -1,0 +1,104 @@
+<!-- <p>This is Hero Page</p> -->
+<!-- <h1>{{course}}</h1> -->
+<!-- <input #box
+      (keyup.enter)="setDataVariable(box.value)"
+      (blur)="setDataVariable(box.value)">
+
+    <p>{{value}}</p> -->
+<!-- <button (click)="setDataVariable('Khadafi Ganteng')">Button</button> -->
+
+<h1>List User and Their Profile</h1> 
+<div class="content"> 
+<div class="spinner-border" role="status" > 
+    <span class="sr-only" id="loading">Loading...</span> 
+</div> 
+</div> 
+<head>
+  <style>
+    ul#menu li {
+      display:inline;
+    }
+  
+    div.polaroid {
+      float: left;
+      width: 33.33%;
+      padding: 5px;
+      background-color: white;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      margin-bottom: 25px;
+    }
+
+    div.polaroidProfile {
+      float: left;
+      width: 25%;
+      padding: 5px;
+      background-color: white;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      margin-bottom: 25px;
+    }
+
+    div.container {
+      padding: 10px 20px;
+    }
+
+    div.row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    div.fotoProfil {
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<table> 
+    <tbody> 
+    <ul *ngFor="let e of lis;" id="menu"> 
+		<button (click)="goToPage('detailPage', e.id)">
+			<li>{{ e.firstName }}</li>
+		</button>
+  </ul> 
+    </tbody> 
+</table>
+ 
+
+<!-- <h1>Profile</h1>
+<br/>
+<div class="row">
+  <div class="polaroidProfile">
+    <tr>
+      <td>
+        <img src={{pictureUser}} style="border-radius: 50%;">
+      </td>
+      <div style="position:absolute; margin-left:40px;">
+        <tr>
+          <p style="font-size: 15px; font-style: oblique;">{{nameUser}}</p>
+        </tr>
+        <tr>
+          {{phoneUser}}
+        </tr>
+        <tr>
+          {{emailUser}}
+        </tr>
+      </div>
+  </tr>
+  </div>
+</div>
+
+<br/>
+<h1>Post</h1>
+<br/>
+
+<div class="row">
+  <tr *ngFor="let e of lisDua;"> 
+    <div class="polaroid">
+    <img src={{e.image}} alt="5 Terre" style="width:100%">
+    <div class="container">
+    <p><b>{{e.owner.firstName}}</b> {{e.text}}</p>
+    <button (click)="goToPage('detailPage', e.id)">
+      Detil
+    </button>
+    </div>
+  </div>      
+  </tr>
+</div>  -->
